@@ -12,7 +12,7 @@ if [ "$os" == "linux" ]; then
 		hash yum &>/dev/null && {
 			sudo yum install autoconf pkgconfig libtool ninja-build \
 			python3-pip python3-setuptools unzip wget;
-			python3 -m pip install meson; }
+			python3 -m pip install --user meson; }
 		dpkg -l autoconf | grep "no description" &>/dev/null && { sudo apt-get install autoconf; }
 		dpkg -l pkg-config | grep "no description" &>/dev/null && { sudo apt-get install pkg-config; }
 		dpkg -l libtool | grep "no description" &>/dev/null && { sudo apt-get install libtool; }
@@ -20,7 +20,7 @@ if [ "$os" == "linux" ]; then
 		dpkg -l python3-pip | grep "no description" &>/dev/null && { sudo apt-get install python3-pip; }
 		dpkg -l python3-setuptools | grep "no description" &>/dev/null && { sudo apt-get install python3-setuptools; }
 		dpkg -l unzip | grep "no description" &>/dev/null && { sudo apt-get install unzip; }
-		python3 -m pip show meson | grep WARNING &>/dev/null && { python3 -m pip install meson; }
+		python3 -m pip show meson | grep WARNING &>/dev/null && { python3 -m pip install --user meson; }
 	fi
 
 	if ! javac -version &>/dev/null; then

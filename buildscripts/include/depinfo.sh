@@ -16,7 +16,7 @@ v_harfbuzz=8.5.0
 v_fribidi=1.0.14
 v_freetype=2-13-2
 v_mbedtls=3.5.2
-v_openssl=3.0.13
+v_openssl=3.0.14
 v_python=3.9.19
 
 
